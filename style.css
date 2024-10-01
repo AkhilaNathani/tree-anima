@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#tree {
+    width: 100%;
+    height: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: auto;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 3px;
+    transition: all 0.3s ease-out;
+}
+
+.node text {
+    font: 12px sans-serif;
+    transition: all 0.3s ease-out;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+    transition: all 0.3s ease-out;
+}
+
+.node:hover circle {
+    fill: #f8f8f8;
+}
+
+.node.collapsed circle {
+    fill: lightsteelblue;
+}
