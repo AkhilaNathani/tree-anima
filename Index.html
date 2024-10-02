@@ -3,15 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India Hierarchical Data - Improved Visualization</title>
+    <title>India Tree Graph</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
 </head>
 <body>
-    <h1>India - State, District, Mandal, Village Hierarchy</h1>
-    <div id="tree"></div>
 
-    <script src="treeData.js"></script> <!-- External tree data -->
-    <script src="tree.js"></script> <!-- External tree rendering script -->
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#graph">Tree Graph</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2>Introduction to Indian Tree Graph</h2>
+        <p>The Indian Tree Graph is a specific type of tree graph that represents the administrative hierarchy of India. It is a hierarchical structure, where each node has a value, and zero or more child nodes. The root node of the Indian Tree Graph is "India", which has child nodes representing the states of India.</p>
+        
+        <h3>Structure of Indian Tree Graph</h3>
+        <p>The Indian Tree Graph can be broken down into the following levels:</p>
+        <ul>
+            <li><strong>Root Node:</strong> India</li>
+            <li><strong>Child Nodes:</strong> States of India (e.g. Andhra Pradesh, Maharashtra, Uttar Pradesh, etc.)</li>
+            <li><strong>State Node:</strong> Child nodes representing districts within the state (e.g. Hyderabad, Mumbai, Lucknow, etc.)</li>
+            <li><strong>District Node:</strong> Child nodes representing mandals (or tehsils) within the district (e.g. Medchal, Vikarabad, etc.)</li>
+            <li><strong>Mandal Node:</strong> Child nodes representing villages within the mandal (e.g. Pocharam, Ghatkesar, etc.)</li>
+        </ul>
+
+        <h3>Key Properties of Indian Tree Graph</h3>
+        <ul>
+            <li><strong>Connected:</strong> The graph is connected, meaning that there is a path between every pair of nodes.</li>
+            <li><strong>Undirected:</strong> The graph is undirected, meaning that edges do not have a direction.</li>
+            <li><strong>No Cycles:</strong> The graph does not contain cycles or loops.</li>
+            <li><strong>Hierarchical:</strong> The graph has a clear hierarchical structure, with each node having a specific level of granularity.</li>
+        </ul>
+
+        <h3>Real-World Applications of Indian Tree Graph</h3>
+        <ul>
+            <li><strong>Administrative Management:</strong> The graph can be used to manage and visualize the administrative hierarchy of India.</li>
+            <li><strong>Geographic Information Systems (GIS):</strong> The graph can be used to represent geographic data and perform spatial analysis.</li>
+            <li><strong>Data Analysis:</strong> The graph can be used to analyze data at different levels of granularity, from national to village level.</li>
+            <li><strong>Decision Support Systems:</strong> The graph can be used to support decision-making at different levels of government and administration.</li>
+        </ul>
+    </section>
+
+    <!-- Tree Graph Section -->
+    <section id="graph">
+        <h2>India Tree Graph</h2>
+        <div id="tree"></div> <!-- Tree Graph Container -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <p>This project is a visualization of hierarchical data using D3.js. The tree graph shows the relationships between Indian states, districts, mandals, and villages.</p>
+    </section>
+
+    <script src="treeData.js"></script> <!-- External Data -->
+    <script src="tree.js"></script> <!-- D3 Tree Logic -->
 </body>
 </html>
+
